@@ -21,11 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CRM.API\CRM.API.csproj" />
+    <ProjectReference Include="../../src/CRM.API/CRMSystem.API.csproj" />
+    <ProjectReference Include="../../src/Infrastructure/CRMSystem.Infrastructure.External/CRMSystem.External.csproj" />
+    <ProjectReference Include="../../src/Infrastructure/CRMSystem.Infrastructure.Persistence/CRMSystem.Persistence.csproj" />
     <ProjectReference Include="..\..\src\Core\CRMSystem.Application\CRMSystem.Application.csproj" />
     <ProjectReference Include="..\..\src\Core\CRMSystem.Domain\CRMSystem.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Infrastructure\CRMSystem.Infrastructure.External\CRMSystem.Infrastructure.External.csproj" />
-    <ProjectReference Include="..\..\src\Infrastructure\CRMSystem.Infrastructure.Persistence\CRMSystem.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

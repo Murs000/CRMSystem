@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A428CD7B-658F-456A-9582-CD3751ED7331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.API", "src\CRM.API\CRM.API.csproj", "{B218DAF4-EE6E-4229-9E63-3BD6107F1B83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.API", "src\CRMSystem.API\CRMSystem.API.csproj", "{B218DAF4-EE6E-4229-9E63-3BD6107F1B83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E93C9EE9-A945-4E0A-B07C-B5D4A86C2A0E}"
 EndProject
@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.Application", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2F9CA567-116C-43CB-B165-B606768251E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.Infrastructure.External", "src\Infrastructure\CRMSystem.Infrastructure.External\CRMSystem.Infrastructure.External.csproj", "{9F56344A-AE38-4D3F-AB78-CD28DA9A4146}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.External", "src\Infrastructure\CRMSystem.External\CRMSystem.External.csproj", "{9F56344A-AE38-4D3F-AB78-CD28DA9A4146}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.Infrastructure.Persistence", "src\Infrastructure\CRMSystem.Infrastructure.Persistence\CRMSystem.Infrastructure.Persistence.csproj", "{926FBA99-75DF-4705-8646-23E047CAFF2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSystem.Persistence", "src\Infrastructure\CRMSystem.Persistence\CRMSystem.Persistence.csproj", "{926FBA99-75DF-4705-8646-23E047CAFF2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BE5C6ECF-6E23-438D-99A2-AE5D1A480E79}"
 EndProject
@@ -29,9 +29,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B218DAF4-EE6E-4229-9E63-3BD6107F1B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -62,6 +59,9 @@ Global
 		{FC40937F-64B4-4BB0-BE3E-A3E061987F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC40937F-64B4-4BB0-BE3E-A3E061987F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC40937F-64B4-4BB0-BE3E-A3E061987F96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B218DAF4-EE6E-4229-9E63-3BD6107F1B83} = {A428CD7B-658F-456A-9582-CD3751ED7331}
