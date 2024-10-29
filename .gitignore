@@ -1,0 +1,34 @@
+# Ignore bin and obj folders recursively
+**/bin/
+**/obj/
+
+# Build artifacts
+*.dll
+*.exe
+*.log
+*.cache
+*.pdb
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio and Visual Studio Code settings
+.vscode/
+.vs/
+
+# Rider
+.idea/
+
+# DotNet CLI
+.dotnet/
+
+# Publish outputs
+publish/
+
+# Additional commonly ignored files
+*.mdf
+*.ldf
+*.db
