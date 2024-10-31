@@ -1,6 +1,8 @@
 using CRMSystem.Application.Features.Commands.Customer.Create;
 using CRMSystem.Application.Features.Commands.Customer.Delete;
+using CRMSystem.Application.Features.Commands.Customer.Import;
 using CRMSystem.Application.Features.Commands.Customer.Update;
+using CRMSystem.Application.Features.Queries.Customer.Export;
 using CRMSystem.Application.Features.Queries.Customer.Get;
 using CRMSystem.Application.Features.Queries.Customer.GetAll;
 using CRMSystem.Application.Features.Queries.Models;
@@ -27,7 +29,7 @@ namespace CRMSystem.API.Controllers
             return Ok(await mediator.Send(new GetCustomerQuery { Id = id }));
         }
 
-        [HttpGet("create")]
+        [HttpPost("create")]
         public async Task<IActionResult> GetCurrentUser(CreateCustomerCommand command)
         {
             return Ok(await mediator.Send(command));
@@ -38,10 +40,34 @@ namespace CRMSystem.API.Controllers
         {
             return Ok(await mediator.Send(command));
         }
+
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> UpdateUser(int id)
         {
             return Ok(await mediator.Send(new DeleteCustomerCommand { Id = id }));
+        }
+
+        [HttpGet("export")]
+        public async Task<IActionResult> ExportCustomersToExcel([FromQuery] PaginationModel? paginationModel, [FromQuery] FilterModel? filterModel)
+        {
+            var result = await mediator.Send(new ExportCustomersToExcelQuery{ FilterModel = filterModel, PaginationModel = paginationModel});
+
+            // Return the Excel file as a downloadable file
+            return File(result.Bytes, result.Type, result.Name);
+        }
+        [HttpPost("import")]
+        public async Task<IActionResult> ImportCustomersFromExcel(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest("No file uploaded.");
+            }
+
+            using var stream = new MemoryStream();
+            await file.CopyToAsync(stream);
+            var command = new ImportCustomersFromExcelCommand{ ExcelFile = stream.ToArray()};
+
+            return Ok(await mediator.Send(command));
         }
     }
 }
