@@ -7,6 +7,7 @@ using CRMSystem.Persistence.DataAccess;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Prometheus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -93,6 +94,13 @@ if (app.Environment.IsDevelopment())
     var db = scope.ServiceProvider.GetRequiredService<CRMDB>();
     db.Database.EnsureCreated();
 }
+
+// Middleware to expose metrics
+app.UseHttpMetrics();
+
+// Map Prometheus metrics endpoint at "/metrics"
+app.MapMetrics(); // Default endpoint is "/metrics"
+
 app.UseSerilogRequestLogging();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
