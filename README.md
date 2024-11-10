@@ -1,7 +1,7 @@
 
 # CRMSystem
 
-A robust CRM system designed to streamline customer relationship management processes, built with .NET and implementing CQRS with MediatR. The project emphasizes observability with integrated logging, metrics, and monitoring using **Prometheus**, **Grafana**, **Elasticsearch**, and **Kibana**.
+CRM system designed to streamline customer relationship management processes, built with .NET and implementing CQRS with MediatR. The project emphasizes observability with integrated logging, metrics, and monitoring using **Prometheus**, **Grafana**, **Elasticsearch**, and **Kibana**.
 
 ## 📁 Project Structure
 
