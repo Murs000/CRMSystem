@@ -101,12 +101,3 @@ We welcome contributions to enhance the CRM system! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
-
----
-
-### References
-
-- [Prometheus Documentation](https://prometheus.io/docs/)
-- [Grafana Documentation](https://grafana.com/docs/)
-- [Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
-- [Kibana Documentation](https://www.elastic.co/guide/en/kibana/current/index.html)
